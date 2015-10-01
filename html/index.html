@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head><title>Calculator</title>
-<script>
-function calculate(action){
-	
-	console.log("adi");
-	var one= parseInt(document.getElementById("one").value);
-	var two= parseInt(document.getElementById("two").value);
-	var output = null;
-
-	if (1==action) {
-		output = one + two ;
-	} else if (2==action) {
-		output = one - two ;
-	}else if(3==action){
-		output = one * two ;
-	}else if(4==action){
-		output = one / two ;
-	}
-console.log('output >',output);
-document.getElementById("output").innerHTML=output;
-}
-</script>
+<script src="/javascript/calculator.js"></script>
 </head>
 <body>
 
 enter first number:<br/>
 <input type="text" id="one" name="NumberOne"/><br/>
+<div id="invalidinput1" style="color:red"></div>
 enter second number:<br/>
 <input type="text" id="two" name="Numbertwo"/><br/>
-
+<div id="invalidinput2" style="color:red"></div>
 <input type="button" onclick="calculate(1)" value="Add"/>
 <input type="button" onclick="calculate(2)" value="Subtract"/>
 <input type="button" onclick="calculate(3)" value="Multiply"/>
